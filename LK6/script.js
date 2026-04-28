@@ -92,9 +92,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const btn = document.getElementById('send-btn');
     const n  = document.getElementById('f-name').value;
     const em = document.getElementById('f-email').value;
+    const a  = document.getElementById('f-age').value;
     const m  = document.getElementById('f-msg').value;
 
-    if (!n || !em || !m) {
+    if (!n || !em || !a || !m) {
       btn.style.background = '#ef4444';
       btn.textContent = 'Lengkapi form!';
 
@@ -115,6 +116,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
       document.getElementById('f-name').value = '';
       document.getElementById('f-email').value = '';
+      document.getElementById('f-age').value = '';
       document.getElementById('f-msg').value = '';
 
       setTimeout(() => {
