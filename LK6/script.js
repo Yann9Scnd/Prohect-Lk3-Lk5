@@ -87,45 +87,8 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  /* ================= FORM ================= */
-  window.sendMsg = function () {
-    const btn = document.getElementById('send-btn');
-    const n  = document.getElementById('f-name').value;
-    const em = document.getElementById('f-email').value;
-    const a  = document.getElementById('f-age').value;
-    const m  = document.getElementById('f-msg').value;
-
-    if (!n || !em || !a || !m) {
-      btn.style.background = '#ef4444';
-      btn.textContent = 'Lengkapi form!';
-
-      setTimeout(() => {
-        btn.style.background = '';
-        btn.textContent = 'Kirim Pesan ✉️';
-      }, 2000);
-
-      return;
-    }
-
-    btn.textContent = 'Mengirim...';
-    btn.disabled = true;
-
-    setTimeout(() => {
-      btn.classList.add('sent');
-      btn.textContent = 'Terkirim! ✅';
-
-      document.getElementById('f-name').value = '';
-      document.getElementById('f-email').value = '';
-      document.getElementById('f-age').value = '';
-      document.getElementById('f-msg').value = '';
-
-      setTimeout(() => {
-        btn.classList.remove('sent');
-        btn.textContent = 'Kirim Pesan ✉️';
-        btn.disabled = false;
-      }, 3000);
-    }, 1000);
-  };
+  /* ================= FORM (Handled by PHP) ================= */
+  // JavaScript sendMsg dihapus karena form sekarang dikelola oleh process.php (Backend)
 
   /* ================= PARTICLES ================= */
   const canvas = document.getElementById('particles');

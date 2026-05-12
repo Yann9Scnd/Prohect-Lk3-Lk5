@@ -407,6 +407,7 @@ section.visible {
   color: #64748b;
 }
 .form-group input,
+.form-group select,
 .form-group textarea {
   background: #0f172a;
   border: 1px solid rgba(56, 189, 248, 0.15);
@@ -420,8 +421,61 @@ section.visible {
   resize: vertical;
 }
 .form-group input:focus,
+.form-group select:focus,
 .form-group textarea:focus {
   border-color: #38bdf8;
+}
+
+/* ================= ERROR & SUCCESS FEEDBACK ================= */
+.error-box {
+  background: rgba(239, 68, 68, 0.1);
+  border: 1px solid #ef4444;
+  color: #f87171;
+  padding: 12px 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  font-size: 14px;
+}
+.error-box ul {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.result-card {
+  margin-top: 30px;
+  background: rgba(16, 185, 129, 0.05);
+  border: 1px solid rgba(16, 185, 129, 0.3);
+  padding: 20px;
+  border-radius: 12px;
+  animation: fadeIn 0.5s ease-out;
+}
+.result-card h3 {
+  color: #10b981;
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+.result-item {
+  font-size: 14px;
+  margin-bottom: 8px;
+  color: #94a3b8;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  padding-bottom: 4px;
+}
+.result-item strong {
+  color: #e2e8f0;
+  width: 80px;
+  display: inline-block;
+}
+.result-time {
+  font-size: 11px;
+  color: #64748b;
+  margin-top: 15px;
+  font-style: italic;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 .send-btn {
   background: #38bdf8;
